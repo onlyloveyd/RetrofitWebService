@@ -11,5 +11,6 @@ package com.gs.retrofitwebservice;
  * @author Mraz
  */
 public class Constant {
-    public static final String BASE_URL="http://www.webservicex.net";
+    public static final String BASE_URL="http://www.webservicex.net/";
+    public static final String MOBILE_CODE_BASE_URL = "http://ws.webxml.com.cn/WebServices/";
 }

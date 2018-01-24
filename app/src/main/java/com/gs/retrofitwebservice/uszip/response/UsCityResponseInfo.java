@@ -1,4 +1,4 @@
-package com.gs.retrofitwebservice.response;
+package com.gs.retrofitwebservice.uszip.response;
 
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;

@@ -1,7 +1,7 @@
-package com.gs.retrofitwebservice;
+package com.gs.retrofitwebservice.uszip;
 
-import com.gs.retrofitwebservice.request.UsCityRequestEnvelope;
-import com.gs.retrofitwebservice.response.UsCityResponseEnvelope;
+import com.gs.retrofitwebservice.uszip.request.UsCityRequestEnvelope;
+import com.gs.retrofitwebservice.uszip.response.UsCityResponseEnvelope;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -23,6 +23,6 @@ public interface api {
             "Content-Type: text/xml",
             "Accept-Charset: utf-8"
     })
-    @POST("/uszip.asmx")
+    @POST("uszip.asmx")
     Call<UsCityResponseEnvelope> getInfoByCity(@Body UsCityRequestEnvelope requestEnvelope);
 }

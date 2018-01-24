@@ -1,4 +1,4 @@
-package com.gs.retrofitwebservice.request;
+package com.gs.retrofitwebservice.uszip.request;
 
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.Namespace;
@@ -28,5 +28,4 @@ public class UsCityRequestData {
     public void setCity(String city) {
         this.city = city;
     }
-
 }
