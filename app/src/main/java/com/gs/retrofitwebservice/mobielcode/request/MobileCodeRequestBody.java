@@ -13,7 +13,7 @@ import org.simpleframework.xml.Root;
  *
  * @author Mraz
  */
-@Root(name = "soap12:Body", strict = false)
+@Root(name = "soap:Body", strict = false)
 public class MobileCodeRequestBody {
     @Element(name = "getMobileCodeInfo", required = false)
     private MobileCodeRequestData mMobileCodeRequestData;

@@ -64,7 +64,8 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<MobileCodeResponseEnvelope> call, Throwable t) {
-                System.err.println("yidong -- onFailure");
+                System.err.println("yidong -- onFailure t = " + t.getMessage());
+                t.printStackTrace();
                 Toast.makeText(MainActivity.this, "请求失败", Toast.LENGTH_SHORT).show();
             }
         });

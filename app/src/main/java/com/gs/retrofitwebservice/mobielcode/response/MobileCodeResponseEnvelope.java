@@ -15,11 +15,11 @@ import org.simpleframework.xml.Root;
  *
  * @author Mraz
  */
-@Root(name = "soap12:Envelope")
+@Root(name = "soap:Envelope")
 @NamespaceList({
         @Namespace( prefix = "xsi", reference = "http://www.w3.org/2001/XMLSchema-instance"),
         @Namespace( prefix = "xsd", reference = "http://www.w3.org/2001/XMLSchema"),
-        @Namespace( prefix = "soap12", reference = "http://www.w3.org/2003/05/soap-envelope")
+        @Namespace( prefix = "soap", reference = "http://www.w3.org/2003/05/soap-envelope")
 })
 public class MobileCodeResponseEnvelope {
     @Element(name = "Body", required = false)
