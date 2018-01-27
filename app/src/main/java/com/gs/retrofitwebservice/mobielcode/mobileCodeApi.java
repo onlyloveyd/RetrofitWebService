@@ -2,8 +2,6 @@ package com.gs.retrofitwebservice.mobielcode;
 
 import com.gs.retrofitwebservice.mobielcode.request.MobileCodeRequestEnvelope;
 import com.gs.retrofitwebservice.mobielcode.response.MobileCodeResponseEnvelope;
-import com.gs.retrofitwebservice.uszip.request.UsCityRequestEnvelope;
-import com.gs.retrofitwebservice.uszip.response.UsCityResponseEnvelope;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -23,8 +21,9 @@ import retrofit2.http.POST;
 public interface mobileCodeApi {
     @Headers({
             "Content-Type: text/xml",
-           // "Accept-Charset: utf-8"
+            "Accept-Charset: utf-8"
     })
     @POST("MobileCodeWS.asmx")
-    Call<MobileCodeResponseEnvelope> getMobileCodeInfo(@Body MobileCodeRequestEnvelope requestEnvelope);
+    Call<MobileCodeResponseEnvelope> getMobileCodeInfo(
+            @Body MobileCodeRequestEnvelope requestEnvelope);
 }

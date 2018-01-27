@@ -8,20 +8,6 @@
     tools:context="com.gs.retrofitwebservice.MainActivity">
 
     <Button
-        android:id="@+id/bt_test"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="测试SOAP"
-    />
-
-    <TextView
-        android:id="@+id/tv_result"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"/>
-
-    <Button
         android:id="@+id/bt_mobileCode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -34,33 +34,7 @@ public class Retrofitance {
     private static Retrofit.Builder retrofitBuilder = new Retrofit.Builder()
             .addConverterFactory(SimpleXmlConverterFactory.create(serializer))
             .baseUrl(Constant.BASE_URL);
-    private static Retrofit.Builder mobileCodeRetrofitBuilder = new Retrofit.Builder()
-            .addConverterFactory(SimpleXmlConverterFactory.create(serializer))
-            .baseUrl(Constant.MOBILE_CODE_BASE_URL);
 
-    public static <S> S createService(Class<S> serviceClass) {
-        okHttpClient.interceptors().add(new Interceptor() {
-            @Override
-            public okhttp3.Response intercept(Interceptor.Chain chain) throws IOException {
-                Request original = chain.request();
-
-                Request.Builder requestBuilder = original.newBuilder()
-                        .header("Content-Type", "text/xml;charset=UTF-8")
-                        .method(original.method(), original.body());
-
-                Request request = requestBuilder.build();
-                return chain.proceed(request);
-            }
-        });
-
-        OkHttpClient client = okHttpClient.connectTimeout(1, TimeUnit.MINUTES)
-                .addInterceptor(new LogInterceptor())
-                .writeTimeout(1, TimeUnit.MINUTES)
-                .readTimeout(1, TimeUnit.MINUTES)
-                .build();
-        Retrofit retrofit = retrofitBuilder.client(client).build();
-        return retrofit.create(serviceClass);
-    }
 
     public static <T> T createMobileCodeService(Class<T> serviceClass) {
         okHttpClient.interceptors().add(new Interceptor() {
@@ -82,7 +56,7 @@ public class Retrofitance {
                 .writeTimeout(1, TimeUnit.MINUTES)
                 .readTimeout(1, TimeUnit.MINUTES)
                 .build();
-        Retrofit retrofit = mobileCodeRetrofitBuilder.client(client).build();
+        Retrofit retrofit = retrofitBuilder.client(client).build();
         return retrofit.create(serviceClass);
     }
 }
