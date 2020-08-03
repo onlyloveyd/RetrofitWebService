@@ -3,7 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/RetrofitWebService.iml" filepath="$PROJECT_DIR$/.idea/RetrofitWebService.iml" />
-      <module fileurl="file://D:\WorkSpace\AndroidStudioProject\RetrofitWebService\RetrofitWebService.iml" filepath="D:\WorkSpace\AndroidStudioProject\RetrofitWebService\RetrofitWebService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/RetrofitWebService-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/RetrofitWebService-app.iml" group="RetrofitWebService/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/StudioProjects-RetrofitWebService.iml" filepath="$PROJECT_DIR$/.idea/modules/StudioProjects-RetrofitWebService.iml" group="RetrofitWebService" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

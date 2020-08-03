@@ -1,4 +1,4 @@
-package com.gs.retrofitwebservice.mobielcode.request;
+package com.gs.retrofitwebservice.mobilecode.request;
 
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.Root;

@@ -2,7 +2,6 @@ package com.gs.retrofitwebservice;
 
 import android.app.Application;
 
-import com.squareup.leakcanary.LeakCanary;
 
 /**
  * 文 件 名: App
@@ -12,16 +11,11 @@ import com.squareup.leakcanary.LeakCanary;
  * 博   客: https://onlyloveyd.cn
  * 描   述：
  */
-public class App extends Application{
+public class App extends Application {
 
-    @Override public void onCreate() {
+    @Override
+    public void onCreate() {
         super.onCreate();
-        if (LeakCanary.isInAnalyzerProcess(this)) {
-            // This process is dedicated to LeakCanary for heap analysis.
-            // You should not init your app in this process.
-            return;
-        }
-        LeakCanary.install(this);
-        // Normal app init code...
+
     }
 }

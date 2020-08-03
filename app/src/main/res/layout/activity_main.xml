@@ -1,25 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.gs.retrofitwebservice.MainActivity">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <Button
-        android:id="@+id/bt_mobileCode"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="测试mobileCode SOAP"
-    />
+    <data>
 
-    <TextView
-        android:id="@+id/tv_mobile_result"
+    </data>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.gs.retrofitwebservice.MainActivity">
+
+        <Button
+            android:id="@+id/bt_mobileCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:onClick="sendRequest"
+            android:text="测试mobileCode SOAP" />
+
+        <TextView
+            android:id="@+id/tv_mobile_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hello World!" />
 
 
-</LinearLayout>
+    </LinearLayout>
+</layout>

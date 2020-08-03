@@ -1,18 +1,16 @@
 package com.gs.retrofitwebservice;
 
-import com.parkingwang.okhttp3.LogInterceptor.LogInterceptor;
 
 import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.convert.AnnotationStrategy;
 import org.simpleframework.xml.core.Persister;
 import org.simpleframework.xml.strategy.Strategy;
 
-import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.simplexml.SimpleXmlConverterFactory;
 
@@ -37,22 +35,19 @@ public class Retrofitance {
 
 
     public static <T> T createMobileCodeService(Class<T> serviceClass) {
-        okHttpClient.interceptors().add(new Interceptor() {
-            @Override
-            public okhttp3.Response intercept(Interceptor.Chain chain) throws IOException {
-                Request original = chain.request();
+        okHttpClient.interceptors().add(chain -> {
+            Request original = chain.request();
 
-                Request.Builder requestBuilder = original.newBuilder()
-                        .header("Content-Type", "text/xml;charset=UTF-8")
-                        .method(original.method(), original.body());
+            Request.Builder requestBuilder = original.newBuilder()
+                    .header("Content-Type", "text/xml;charset=UTF-8")
+                    .method(original.method(), original.body());
 
-                Request request = requestBuilder.build();
-                return chain.proceed(request);
-            }
+            Request request = requestBuilder.build();
+            return chain.proceed(request);
         });
 
         OkHttpClient client = okHttpClient.connectTimeout(1, TimeUnit.MINUTES)
-                .addInterceptor(new LogInterceptor())
+                .addInterceptor(new HttpLoggingInterceptor())
                 .writeTimeout(1, TimeUnit.MINUTES)
                 .readTimeout(1, TimeUnit.MINUTES)
                 .build();

@@ -1,7 +1,7 @@
-package com.gs.retrofitwebservice.mobielcode;
+package com.gs.retrofitwebservice.mobilecode;
 
-import com.gs.retrofitwebservice.mobielcode.request.MobileCodeRequestEnvelope;
-import com.gs.retrofitwebservice.mobielcode.response.MobileCodeResponseEnvelope;
+import com.gs.retrofitwebservice.mobilecode.request.MobileCodeRequestEnvelope;
+import com.gs.retrofitwebservice.mobilecode.response.MobileCodeResponseEnvelope;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
