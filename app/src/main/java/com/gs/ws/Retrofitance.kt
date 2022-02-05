@@ -1,9 +1,7 @@
-package com.gs.retrofitwebservice
+package com.gs.ws
 
-import com.gs.retrofitwebservice.mobilecode.MobileCodeApi
-import okhttp3.Interceptor
+import com.gs.ws.mobilecode.MobileCodeApi
 import okhttp3.OkHttpClient
-import okhttp3.Request
 import okhttp3.logging.HttpLoggingInterceptor
 import org.simpleframework.xml.Serializer
 import org.simpleframework.xml.convert.AnnotationStrategy
@@ -19,18 +17,8 @@ object Retrofitance {
     private val serializer: Serializer = Persister(strategy)
 
     private val client = OkHttpClient.Builder()
-        .addInterceptor(HttpLoggingInterceptor())
-        .addInterceptor(Interceptor { chain ->
-            val original = chain.request()
-            val requestBuilder: Request.Builder = original.newBuilder()
-                .header("Content-Type", "text/xml;charset=UTF-8")
-                .header("Accept-Charset", "utf-8")
-                .method(original.method, original.body)
-            val request: Request = requestBuilder.build()
-            chain.proceed(request)
-        })
+        .addInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
         .build()
-
 
     private val retrofitance = Retrofit.Builder()
         .client(client)
@@ -38,5 +26,5 @@ object Retrofitance {
         .baseUrl(BASE_URL)
         .build()
 
-    val mobileCodeApi = retrofitance.create(MobileCodeApi::class.java)
+    val mobileCodeApi: MobileCodeApi = retrofitance.create(MobileCodeApi::class.java)
 }

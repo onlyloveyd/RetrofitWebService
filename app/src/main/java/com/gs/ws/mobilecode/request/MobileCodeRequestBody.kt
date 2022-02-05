@@ -1,10 +1,10 @@
-package com.gs.retrofitwebservice.mobilecode.request
+package com.gs.ws.mobilecode.request
 
 import org.simpleframework.xml.Element
 import org.simpleframework.xml.Root
 
-@Root(name = "soap:Body", strict = false)
+@Root(name = "soapenv:Body")
 class MobileCodeRequestBody {
-    @Element(name = "getMobileCodeInfo", required = false)
+    @field:Element(name = "web:getMobileCodeInfo", required = true)
     var mobileCodeRequestData: MobileCodeRequestData? = null
 }

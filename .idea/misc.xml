@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/05_Project/00_Android_Project/RetrofitWebService/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2715" />
+        <entry key="..\:/05_Project/00_Android_Project/RetrofitWebService/app/src/main/res/layout/activity_main.xml" value="0.2536231884057971" />
+        <entry key="..\:/05_Project/00_Android_Project/RetrofitWebService/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
   <component name="MarkdownProjectSettings">
     <PreviewSettings splitEditorLayout="SPLIT" splitEditorPreview="PREVIEW" useGrayscaleRendering="false" zoomFactor="1.0" maxImageWidth="0" showGitHubPageIfSynced="false" allowBrowsingInPreview="false" synchronizePreviewPosition="true" highlightPreviewType="LINE" highlightFadeOut="5" highlightOnTyping="true" synchronizeSourcePosition="true" verticallyAlignSourceAndPreviewSyncPosition="true" showSearchHighlightsInPreview="true" showSelectionInPreview="true">
       <PanelProvider>
